@@ -1,0 +1,127 @@
+Metadata-Version: 2.4
+Name: alnPairDist
+Version: 1.0.1
+Summary: alnPairDist: A tool for calculating pairwise similarity of taxa in a multiple sequence alignment
+Author-email: Chrispin Chaguza <chrispin.chaguza@gmail.com>
+Maintainer-email: Chrispin Chaguza <chrispin.chaguza@gmail.com>
+Project-URL: Homepage, https://github.com/ChrispinChaguza/alnPairDist/
+Project-URL: Repository, https://github.com/ChrispinChaguza/alnPairDist.git
+Project-URL: Issues, https://github.com/ChrispinChaguza/alnPairDist/issues
+Project-URL: Documentation, https://github.com/ChrispinChaguza/alnPairDist/
+Project-URL: Website, https://github.com/ChrispinChaguza/alnPairDist
+Keywords: Sequence alignment,Pairwise distance,Nucleotides
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools
+Requires-Dist: toml
+Requires-Dist: biopython
+
+# alnPairDist: A tool for calculating pairwise similarity of taxa in a multiple sequence alignment
+
+## Getting the alnPairDist source code
+```
+git clone https://github.com/ChrispinChaguza/alnPairDist.git
+```
+
+## Setup alnPairDist software on a local machine
+
+### Installing alnPairDist using Pip
+
+The easist way to install the latest version of alnPairDist is using Pip
+```
+pip install alnPairDist
+```
+
+Here is a command to install a specific version of ViralLC using Pip
+```
+pip install alnPairDist=={INSERT VERSION HERE}
+```
+
+### Installing ViralLC using Conda
+
+Installation using Conda (upcoming!).
+```
+conda install -c conda-forge alnPairDist
+```
+```
+conda install -c bioconda alnPairDist
+```
+
+### Installing ViralLC directly from Github
+
+First, download alnPairDist from GitHub and then manually setup the environment for the package 
+
+```
+git clone https://github.com/ChrispinChaguza/alnPairDist.git
+cd alnPairDist
+```
+
+Second, manually install the required package dependencies 
+
+```
+conda install -c conda-forge python=3.14.2 -y
+conda install -c conda-forge biopython=1.86 -y
+```
+```
+pip install build
+```
+
+
+Follow the instructions below to build and install alnPairDist
+```
+python -m build 
+pip install --force-reinstall dist/{INSERT THE COMPILED SOFTWARE VERSION} 
+```
+
+## Basic usage
+
+
+The simplest way to run alnPairDist is to provide a multiple sequence alignment in FASTA format
+```
+alnPairDist --aln input.fasta --out report.tsv
+```
+```
+alnPairDist -a input.fasta -o report.tsv 
+```
+
+Specify the "--threads" or "-t" option to use more threads
+```
+alnPairDist --aln input.fasta --out report.tsv --threads 10
+```
+```
+alnPairDist -a input.fasta -o report.tsv -t 10
+```
+
+To suppress the output on the terminal
+```
+alnPairDist --aln input.fasta --out report.tsv --threads 10 --quiet
+```
+```
+alnPairDist --aln input.fasta --out report.tsv --threads 10 -q
+```
+### Example dataset (Rotavirus A)
+
+Calculating pairwise distances between sequences using the *example.aln* alignment file in the *example* directory
+```
+alnPairDist --aln example.aln --out report.tsv --threads 10
+```
+
+### Software version
+
+Run the command below to show the software version
+```
+alnPairDist --version
+```
+``` 
+alnPairDist -v
+```
+
+## Cite
+Chrispin Chaguza, alnPairDist, https://github.com/ChrispinChaguza/alnPairDist.git

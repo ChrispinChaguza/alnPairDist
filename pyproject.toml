@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools"]
+
+[project]
+name = "alnPairDist"
+version = "1.0.1"
+authors = [
+  { name="Chrispin Chaguza", email="chrispin.chaguza@gmail.com" },
+]
+
+maintainers = [
+  {name = "Chrispin Chaguza", email = "chrispin.chaguza@gmail.com"},
+]
+
+description = "alnPairDist: A tool for calculating pairwise similarity of taxa in a multiple sequence alignment"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Intended Audience :: Science/Research",
+]
+
+keywords = ["Sequence alignment","Pairwise distance","Nucleotides"]
+dependencies = [
+   "setuptools",
+   "toml",
+   "biopython"
+]
+
+[tool.setuptools.packages]
+find = {} 
+
+[tool.setuptools]
+py-modules = ["alnPairDist.alnPairDist.alnPairDist","alnPairDist"]
+
+[project.scripts]
+alnPairDist = "alnPairDist:main"
+
+[project.urls]
+Homepage = "https://github.com/ChrispinChaguza/alnPairDist/"
+Repository = "https://github.com/ChrispinChaguza/alnPairDist.git"
+Issues = "https://github.com/ChrispinChaguza/alnPairDist/issues"
+Documentation = "https://github.com/ChrispinChaguza/alnPairDist/"
+Website = "https://github.com/ChrispinChaguza/alnPairDist"
+
