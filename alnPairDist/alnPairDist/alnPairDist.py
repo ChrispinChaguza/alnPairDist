@@ -7,7 +7,7 @@ from Bio import SeqIO
 import multiprocessing
 from itertools import combinations
 
-version = "1.0.2"
+version = "1.0.3"
 
 def compareSeqs(i,j,k):
     seqMatch=0

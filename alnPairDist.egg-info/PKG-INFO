@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: alnPairDist
-Version: 1.0.2
+Version: 1.0.3
 Summary: alnPairDist: A tool for calculating pairwise similarity of taxa in a multiple sequence alignment
 Author-email: Chrispin Chaguza <chrispin.chaguza@gmail.com>
 Maintainer-email: Chrispin Chaguza <chrispin.chaguza@gmail.com>
