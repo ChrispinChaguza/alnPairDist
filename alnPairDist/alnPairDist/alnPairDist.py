@@ -90,7 +90,7 @@ def main():
     fhandle=open(str(cmdValues['outputFile']),"w")
 
     if cmdValues['verboseOutput']:
-        print("seq1\tseq2\tseq1.len\tseq2.len\tseq1.lenNoNs\tseq2.lenNoNs\tseq1.cov\tseq2.cov\tmatch\tmismatch\tpid\n")
+        print("seq1\tseq2\tseq1.len\tseq2.len\tseq1.lenNoNs\tseq2.lenNoNs\tseq1.cov\tseq2.cov\tmatch\tmismatch\tpid")
     else:
         pass
 
