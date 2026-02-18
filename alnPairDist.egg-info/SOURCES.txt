@@ -1,3 +1,4 @@
+LICENSE
 README.md
 pyproject.toml
 alnPairDist/__init__.py

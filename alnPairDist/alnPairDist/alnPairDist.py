@@ -7,6 +7,8 @@ from Bio import SeqIO
 import multiprocessing
 from itertools import combinations
 
+version = "1.0.2"
+
 def compareSeqs(i,j,k):
     seqMatch=0
     seqMisMatch=0
@@ -40,7 +42,7 @@ def compareSeqs(i,j,k):
     return(f"{i.id}\t{j.id}\t{len1}\t{len2}\t{len1noN}\t{len2noN}\t{cov1}\t{cov2}\t{seqMatch}\t{seqMisMatch}\t{seqDist}")
 
 def main():
-    version = "1.0.1"
+    global version
     options=argparse.ArgumentParser(sys.argv[0],
                 usage=argparse.SUPPRESS,
                 description='alnPairDist: A tool for calculating pairwise similarity of taxa in a multiple sequence alignment',
