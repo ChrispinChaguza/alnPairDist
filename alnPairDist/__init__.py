@@ -1,13 +1,3 @@
-#!/usr/bin/env python
+"""alnPairDist: A tool for calculating pairwise similarity of taxa in a multiple sequence alignment"""
 
-import os
-import sys
-from Bio import SeqIO
-import argparse
-from alnPairDist.alnPairDist import alnPairDist
-
-def main():
-    alnPairDist.main()            
-
-if __name__=="__main__":
-    main()
+__version__ = "1.0.5"

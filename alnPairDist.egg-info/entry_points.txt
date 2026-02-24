@@ -1,2 +1,2 @@
 [console_scripts]
-alnPairDist = alnPairDist:main
+alnPairDist = alnPairDist.__main__:main

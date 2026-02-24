@@ -3,7 +3,7 @@ requires = ["setuptools"]
 
 [project]
 name = "alnPairDist"
-version = "1.0.3"
+dynamic = ["version"]
 authors = [
   { name="Chrispin Chaguza", email="chrispin.chaguza@gmail.com" },
 ]
@@ -33,14 +33,17 @@ dependencies = [
    "biopython"
 ]
 
+[tool.setuptools.dynamic]
+version = {attr = "alnPairDist.__version__"}
+
 [tool.setuptools.packages]
 find = {} 
 
 [tool.setuptools]
-py-modules = ["alnPairDist.alnPairDist.alnPairDist","alnPairDist"]
+py-modules = ["alnPairDist.alnPairDist","alnPairDist"]
 
 [project.scripts]
-alnPairDist = "alnPairDist:main"
+alnPairDist = "alnPairDist.__main__:main"
 
 [project.urls]
 Homepage = "https://github.com/ChrispinChaguza/alnPairDist/"

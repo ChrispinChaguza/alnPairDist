@@ -6,8 +6,7 @@ import argparse
 from Bio import SeqIO
 import multiprocessing
 from itertools import combinations
-
-version = "1.0.3"
+from .__init__ import __version__
 
 def compareSeqs(i,j,k):
     seqMatch=0
@@ -41,9 +40,8 @@ def compareSeqs(i,j,k):
 
     return(f"{i.id}\t{j.id}\t{len1}\t{len2}\t{len1noN}\t{len2noN}\t{cov1}\t{cov2}\t{seqMatch}\t{seqMisMatch}\t{seqDist}")
 
-def main():
-    global version
-    options=argparse.ArgumentParser(sys.argv[0],
+def seqDistance():
+    options=argparse.ArgumentParser(prog="alnPairDist",
                 usage=argparse.SUPPRESS,
                 description='alnPairDist: A tool for calculating pairwise similarity of taxa in a multiple sequence alignment',
                 prefix_chars='-',
@@ -67,7 +65,7 @@ def main():
 
     if len(sys.argv[:])>1: 
         if sys.argv[1]=="-v" or sys.argv[1]=="--version":
-            print(f"alnPairDist {version}")
+            print(f"alnPairDist {__version__}")
             sys.exit()
         else:
             options=options.parse_args(args=None if sys.argv[2:] else ['--help'])
@@ -111,5 +109,3 @@ def main():
 
         fhandle.write(f"{result}\n")
 
-if __name__=="__main__":
-    main()
